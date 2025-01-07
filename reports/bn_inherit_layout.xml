@@ -5,7 +5,7 @@
         <xpath expr="//div[@name='company_address']" position="replace">
         </xpath>
         <xpath
-        expr="//div[@t-attf-class='footer o_clean_footer o_company_#{company.id}_layout']"
+        expr="//div[hasclass('footer')]"
         position="replace">
     </xpath>
     </template>
