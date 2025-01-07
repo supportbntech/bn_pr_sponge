@@ -1,0 +1,14 @@
+# sphinx build directories
+_build/
+
+# dotfiles
+.*
+.DS_Store
+!.gitignore
+!.github
+!.mailmap
+# compiled python files
+*.py[co]
+__pycache__/
+# setup.py egg_info
+*.egg-info
