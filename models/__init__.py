@@ -1,0 +1,1 @@
+from . import bn_inherit_company
