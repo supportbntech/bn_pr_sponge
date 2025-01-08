@@ -53,16 +53,16 @@
                             <div>TRN#: <span t-field="o.company_id.vat" /></div>
                         </div>
                     </div>
-                <div id="informations" class="row" style="padding-top: 20px;">
-                        <div class="col-5 mb-2">
+                <div id="informations" class="row mb-2" style="padding-top: 20px;">
+                        <div class="col-5 ">
                             <div class="row">
-                                <p>
+                                <p class="col-4">
                                     <strong>Client: </strong>
                                 </p>
-                                <p t-if="o.partner_id" t-field="o.partner_id.name" />
+                                <p t-if="o.partner_id" t-field="o.partner_id.name"/>
                             </div>
                             <div class="row">
-                                <p>
+                                <p class="col-4">
                                     <strong t-if="o.partner_id.vat">TRN#: </strong>
                                 </p>
                                 <t t-if="o.partner_id.vat">
@@ -70,7 +70,7 @@
                                 </t>
                             </div>
                             <div class="row">
-                                <p>
+                                <p class="col-4">
                                     <strong>Address: </strong>
                                 </p>
                                  <p>
@@ -97,23 +97,22 @@
                             </div> -->
 
                         </div>
-                        <div class="offset-1 col-6 mb-2" style="margin-right:-30px;">
-                            <div>
-                                <p>
+                        <div class="offset-1 col-5" style="margin-right:-30px;">
+                            <div class="row">
+                                <p class="col-5">
                                     <strong>Invoice Number: </strong>
                                 </p>
                                 <p t-if=" o.name !='/'" t-field="o.name" />
 
                             </div>
-                            <div>
-                                <p>
+                            <div class="row">
+                                <p class="col-5">
                                     <strong>Invoice Date: </strong>
                                 </p>
                                 <p t-if=" o.invoice_date" t-field="o.invoice_date" />
-
                             </div>
-                            <div>
-                                <p>
+                            <div class="row">
+                                <p class="col-5">
                                     <strong>Payment Terms: </strong>
                                 </p>
                                 <p t-if=" o.invoice_payment_term_id"
