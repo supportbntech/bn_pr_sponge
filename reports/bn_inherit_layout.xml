@@ -3,8 +3,12 @@
 
     <template id="bold_external_layout_inherit" inherit_id="web.external_layout_bold">
         <xpath expr="//div[@name='company_address']" position="replace"></xpath>
-        <xpath expr="//div[last()]" position="replace">
-    </xpath>
+        <!-- replace footer-->
+        <xpath expr="//div[last()]" position="replace"/>
     </template>
-
+    <template id="striped_external_layout_inherit" inherit_id="web.external_layout_striped">
+        <xpath expr="//div[@name='company_address']" position="replace"></xpath>
+        <!-- replace footer-->
+        <xpath expr="//div[last()]" position="replace"/>
+    </template>
 </odoo>
