@@ -56,13 +56,13 @@
                 <div id="informations" class="row mb-2" style="padding-top: 20px;">
                         <div class="col-5 ">
                             <div class="row">
-                                <p class="col-4">
+                                <p class="col-3">
                                     <strong>Client: </strong>
                                 </p>
                                 <p t-if="o.partner_id" t-field="o.partner_id.name"/>
                             </div>
                             <div class="row">
-                                <p class="col-4">
+                                <p class="col-3">
                                     <strong t-if="o.partner_id.vat">TRN#: </strong>
                                 </p>
                                 <t t-if="o.partner_id.vat">
@@ -70,7 +70,7 @@
                                 </t>
                             </div>
                             <div class="row">
-                                <p class="col-4">
+                                <p class="col-3">
                                     <strong>Address: </strong>
                                 </p>
                                  <p>
