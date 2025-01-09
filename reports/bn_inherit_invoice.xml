@@ -124,6 +124,33 @@
             <xpath expr="//thead" position="attributes">
                 <attribute name="class">th-accent</attribute>
             </xpath>
+
+            <!-- th modifications-->
+            <xpath expr="//th[@name='th_subtotal']" position="replace">
+                <th name="th_taxes" t-attf-class="text-end">
+                    <span>Tax Amount</span>
+                </th>
+            </xpath>
+            <xpath expr="//th[@name='th_priceunit']" position="after">
+                <th name="th_subtotal" class="text-end">
+                    <span>Amount Befor VAT</span>
+                </th>
+            </xpath>
+
+            <!-- td modifications-->
+            <xpath expr="//td[@name='td_subtotal']" position="replace">
+                <t t-set="tax_price_subtotal" t-value="round(line.price_subtotal * (line.tax_ids.amount/100),2) or 0" />
+                <td class="text-end">
+                    <span class="text-nowrap " t-esc="tax_price_subtotal" id="tax_base_amount" />
+                </td>
+            </xpath>
+            <xpath expr="//td[@name='td_price_unit']" position="after">
+                <td name="td_subtotal" class="text-end">
+                    <span class="text-nowrap" t-field="line.price_subtotal">27.00</span>
+                </td>
+            </xpath>
+
+
             <xpath expr="//div[@class='text-muted mb-3']" position="replace">
                 <!--terms and conditions-->
                 <div class="text-muted mb-3"
